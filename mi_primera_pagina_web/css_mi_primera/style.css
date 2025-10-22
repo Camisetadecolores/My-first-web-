@@ -1,0 +1,360 @@
+/* ESTILO GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Anton', sans-serif;
+    background-image: url(../img_mi_primera/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* HOVER */
+
+nav a:hover {
+    background: #8a7bc9;
+    transform: scale(1.05); 
+    transition: all 0.3s ease; 
+}
+
+.inspo img:hover {
+    transform: scale(1.1); /* Zoom suave */
+    transition: transform 0.3s ease;
+}
+
+/* CABECERA */
+
+header {
+    display: flex;
+    width: 100vw; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header img {
+    height: auto;
+    width: 90vw; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    width: 90vw;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    color: yellow;
+    font-size: 1rem;
+    background: #A699EE;
+    text-align: center;
+    text-decoration: none;
+    text-shadow:   0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 50px;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+/* PARTE PRINCIPAL */
+
+.fotolateral {
+    display: none;
+}
+
+.intro, .inspo, .pasos, .ingredientes, .web-volver {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.inspo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 1rem; 
+}
+
+.div-imagenes {
+    display: flex;
+    justify-content: center;
+}
+
+.inspo img {
+    width: 40vw;
+    height: auto;
+}
+
+.web-volver .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    margin-left: 45vw;
+}
+
+#web-original a, #volver-arriba a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    background: #A699EE;
+    color: yellow;
+    text-decoration: none;
+    text-shadow: 0 0 2px black;
+    border-radius: 50%; 
+    padding: 2rem; 
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    margin-bottom: 2rem;
+}
+
+footer img {
+    width: 50vw;
+}
+
+footer p{
+    color: #A699EE;
+    font-size: 1rem; 
+    text-align: center;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+} 
+
+
+/* TEXTOS */
+
+h1, h2 {
+    color: #A699EE;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.desordenadacustom, .ordenadacustom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-position: inside;
+}
+
+.desordenadacustom li, .ordenadacustom li {
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 1rem;  
+    width: 90vw; 
+}
+
+.desordenadacustom {
+    margin-left: 40rem;
+
+}
+.ordenadacustom li {
+    text-align: justify;
+}
+
+.desordenadacustom li::marker, .ordenadacustom li::marker {
+    color:#A699EE;
+}
+
+
+/* MARGENES */
+.container {
+    margin: 0 20px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 800px) {
+
+    html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+    * {
+        box-sizing: border-box;
+        width: 100vw;
+    }
+    
+    .main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 80vw;
+        gap: 10rem;
+
+    }
+    
+    .main .parteprincipal {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 55vw;
+        order: 1;
+    }
+
+    .main .fotolateral {
+        display:flex;
+        width: 15vw;
+        order: 1;
+        padding-left: 17rem;
+        padding-top: 0;
+    }
+
+    .main .fotolateral img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+
+    }
+    
+    header img {
+        width: 80vw;
+        margin-bottom: 5rem;
+        margin-left: 5rem;
+    }
+    
+    nav {
+        width: 90vw;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2vw;
+        width: 90vw;
+        margin-bottom: 2rem;
+    }
+    
+    nav a {
+        width: auto;
+        min-width: 15vw;
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+
+     .inspo .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .imagenes-inspo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .div-imagenes {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media print {
+
+    .navegacion, .web-volver {
+        display: none;
+    }
+
+      .inspo .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .imagenes-inspo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .div-imagenes {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        margin-inline: 3rem;
+    }
+
+    .intro, .inspo, .pasos, .ingredientes {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+
+
+}
